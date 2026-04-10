@@ -1,13 +1,14 @@
 workflows:
- ios-workflow:
-  name: iOS Build
-  max_build_duration: 60
+  ios-workflow:
+    name: iOS Build
+    max_build_duration: 60
 
-  environment:
-    flutter: stable
-  scripts:
-    - flutter pub get
-    - flutter build ipa --release
+    environment:
+      flutter: stable
 
-   artifacts:
-     - build/ios/ipa/*.ipa
+    scripts:
+      - flutter pub get
+      - flutter build ipa --release
+
+    artifacts:
+      - build/ios/ipa/*.ipa
